@@ -1,0 +1,11 @@
+/* GREMLIN.OS STARFIELD — use in JanitorAI About Me <style> */
+.pp-page-background {
+  background-color: #110b19 !important;
+  background-image:
+    radial-gradient(ellipse at 50% 12%, #70285b55, transparent 55%),
+    radial-gradient(circle at 20% 75%, #47205d44, transparent 45%),
+    radial-gradient(circle, #ffb6df77 1px, transparent 1.8px),
+    radial-gradient(circle, #ffffff55 1px, transparent 1.8px) !important;
+  background-size: 100% 100%, 100% 100%, 170px 190px, 230px 260px !important;
+  background-position: center, center, 14px 30px, 90px 110px !important;
+}

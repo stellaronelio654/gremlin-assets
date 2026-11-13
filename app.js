@@ -1,0 +1,836 @@
+/* Gremlin.OS V2: complete catalog. All images are local to this repository. */
+const assets = [
+  {
+    "id": "gremlin-neon",
+    "title": "Neon Gremlin (Original)",
+    "file": "assets/avatars/gremlin-neon.png",
+    "category": "Avatars",
+    "description": "Original neon avatar from the first Gremlin.OS library.",
+    "tags": [
+      "pink",
+      "neon",
+      "cat",
+      "profile"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "gremlin-cool",
+    "title": "Cool Gremlin (Original)",
+    "file": "assets/avatars/gremlin-cool.png",
+    "category": "Avatars",
+    "description": "Original sticker with sunglasses.",
+    "tags": [
+      "cat",
+      "sunglasses",
+      "chibi",
+      "transparent"
+    ],
+    "size": "227 × 237",
+    "type": "PNG"
+  },
+  {
+    "id": "gremlin-peek",
+    "title": "Peeking Gremlin (Original)",
+    "file": "assets/avatars/gremlin-peek.png",
+    "category": "Avatars",
+    "description": "Original peeking sticker.",
+    "tags": [
+      "cat",
+      "peek",
+      "chibi",
+      "transparent"
+    ],
+    "size": "238 × 224",
+    "type": "PNG"
+  },
+  {
+    "id": "neon-headphones-gremlin",
+    "title": "Neon Headphones Gremlin",
+    "file": "assets/avatars/neon-headphones-gremlin.png",
+    "category": "Avatars",
+    "description": "Pink neon cat-eared headphone profile portrait",
+    "tags": [
+      "avatar",
+      "headphones",
+      "cat"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "punk-cat-avatar",
+    "title": "Punk Cat Avatar",
+    "file": "assets/avatars/punk-cat-avatar.png",
+    "category": "Avatars",
+    "description": "Profile portrait based on the punk cat chibi",
+    "tags": [
+      "avatar",
+      "cat",
+      "punk"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "moonlit-gremlin-banner",
+    "title": "Moonlit Gremlin Banner",
+    "file": "assets/banners/moonlit-gremlin-banner.png",
+    "category": "Banners",
+    "description": "Wide atmospheric gremlin banner art",
+    "tags": [
+      "hero",
+      "header",
+      "moon",
+      "neon"
+    ],
+    "size": "2172 × 724",
+    "type": "PNG"
+  },
+  {
+    "id": "pink-star-nebula",
+    "title": "Pink Star Nebula",
+    "file": "assets/backgrounds/pink-star-nebula.png",
+    "category": "Backgrounds",
+    "description": "Atmospheric black and purple galaxy background",
+    "tags": [
+      "stars",
+      "pink",
+      "space"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "sparkles-hearts-overlay",
+    "title": "Sparkles and Hearts Overlay",
+    "file": "assets/decorations/sparkles-hearts-overlay.png",
+    "category": "Decorations",
+    "description": "Decorative pink sparkles and hearts overlay",
+    "tags": [
+      "stars",
+      "hearts",
+      "overlay",
+      "transparent"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "neon-cat-divider",
+    "title": "Neon Cat Divider",
+    "file": "assets/dividers/neon-cat-divider.png",
+    "category": "Dividers",
+    "description": "Wide neon ornamental divider",
+    "tags": [
+      "ornament",
+      "separator",
+      "pink",
+      "transparent"
+    ],
+    "size": "2172 × 724",
+    "type": "PNG"
+  },
+  {
+    "id": "headphone-gremlin",
+    "title": "Headphone Gremlin",
+    "file": "assets/chibis/headphone-gremlin.png",
+    "category": "Chibis",
+    "description": "Chibi cat-gremlin wearing headphones",
+    "tags": [
+      "headphones",
+      "cat",
+      "chibi",
+      "transparent"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "sleepy-pillow-gremlin",
+    "title": "Sleepy Pillow Gremlin",
+    "file": "assets/chibis/sleepy-pillow-gremlin.png",
+    "category": "Chibis",
+    "description": "Sleepy cat character peeking from a pillow",
+    "tags": [
+      "sleepy",
+      "cat",
+      "chibi",
+      "transparent"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "heart-gremlin",
+    "title": "Heart Gremlin",
+    "file": "assets/chibis/heart-gremlin.png",
+    "category": "Chibis",
+    "description": "Cute chibi with a pink heart",
+    "tags": [
+      "heart",
+      "cat",
+      "chibi",
+      "transparent"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "punk-headphone-cat",
+    "title": "Punk Headphone Cat",
+    "file": "assets/chibis/punk-headphone-cat.png",
+    "category": "Chibis",
+    "description": "Punk chibi cat with pink headphones",
+    "tags": [
+      "punk",
+      "headphones",
+      "chibi",
+      "transparent"
+    ],
+    "size": "1254 × 1254",
+    "type": "PNG"
+  },
+  {
+    "id": "chibi-peeking",
+    "title": "Chibi Peeking",
+    "file": "assets/chibis/stickers/chibi-peeking.png",
+    "category": "Chibis",
+    "description": "Individual transparent chibi sticker: chibi peeking.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "chibis",
+      "transparent"
+    ],
+    "size": "412 × 402",
+    "type": "PNG"
+  },
+  {
+    "id": "chibi-sleepy",
+    "title": "Chibi Sleepy",
+    "file": "assets/chibis/stickers/chibi-sleepy.png",
+    "category": "Chibis",
+    "description": "Individual transparent chibi sticker: chibi sleepy.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "chibis",
+      "transparent"
+    ],
+    "size": "412 × 402",
+    "type": "PNG"
+  },
+  {
+    "id": "chibi-thumbs-up",
+    "title": "Chibi Thumbs Up",
+    "file": "assets/chibis/stickers/chibi-thumbs-up.png",
+    "category": "Chibis",
+    "description": "Individual transparent chibi sticker: chibi thumbs up.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "chibis",
+      "transparent"
+    ],
+    "size": "410 × 402",
+    "type": "PNG"
+  },
+  {
+    "id": "bell-with-bow",
+    "title": "Bell With Bow",
+    "file": "assets/icons/stickers/bell-with-bow.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: bell with bow.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "161 × 156",
+    "type": "PNG"
+  },
+  {
+    "id": "cat-ears",
+    "title": "Cat Ears",
+    "file": "assets/icons/stickers/cat-ears.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: cat ears.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "198 × 117",
+    "type": "PNG"
+  },
+  {
+    "id": "claw-marks",
+    "title": "Claw Marks",
+    "file": "assets/icons/stickers/claw-marks.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: claw marks.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "149 × 163",
+    "type": "PNG"
+  },
+  {
+    "id": "crescent-moon",
+    "title": "Crescent Moon",
+    "file": "assets/icons/stickers/crescent-moon.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: crescent moon.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "138 × 133",
+    "type": "PNG"
+  },
+  {
+    "id": "curled-tail",
+    "title": "Curled Tail",
+    "file": "assets/icons/stickers/curled-tail.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: curled tail.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "143 × 173",
+    "type": "PNG"
+  },
+  {
+    "id": "exclamation-marks",
+    "title": "Exclamation Marks",
+    "file": "assets/icons/stickers/exclamation-marks.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: exclamation marks.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "136 × 119",
+    "type": "PNG"
+  },
+  {
+    "id": "galaxy-swirl",
+    "title": "Galaxy Swirl",
+    "file": "assets/icons/stickers/galaxy-swirl.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: galaxy swirl.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "160 × 141",
+    "type": "PNG"
+  },
+  {
+    "id": "heart-chat-bubble",
+    "title": "Heart Chat Bubble",
+    "file": "assets/icons/stickers/heart-chat-bubble.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: heart chat bubble.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "154 × 129",
+    "type": "PNG"
+  },
+  {
+    "id": "heart-outline",
+    "title": "Heart Outline",
+    "file": "assets/icons/stickers/heart-outline.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: heart outline.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "178 × 136",
+    "type": "PNG"
+  },
+  {
+    "id": "heart-solid",
+    "title": "Heart Solid",
+    "file": "assets/icons/stickers/heart-solid.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: heart solid.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "152 × 145",
+    "type": "PNG"
+  },
+  {
+    "id": "little-sparkle",
+    "title": "Little Sparkle",
+    "file": "assets/icons/stickers/little-sparkle.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: little sparkle.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "91 × 103",
+    "type": "PNG"
+  },
+  {
+    "id": "mini-sparkles",
+    "title": "Mini Sparkles",
+    "file": "assets/icons/stickers/mini-sparkles.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: mini sparkles.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "101 × 118",
+    "type": "PNG"
+  },
+  {
+    "id": "paw-chat-bubble",
+    "title": "Paw Chat Bubble",
+    "file": "assets/icons/stickers/paw-chat-bubble.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: paw chat bubble.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "157 × 142",
+    "type": "PNG"
+  },
+  {
+    "id": "paw-print-large",
+    "title": "Paw Print Large",
+    "file": "assets/icons/stickers/paw-print-large.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: paw print large.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "195 × 174",
+    "type": "PNG"
+  },
+  {
+    "id": "paw-print-small",
+    "title": "Paw Print Small",
+    "file": "assets/icons/stickers/paw-print-small.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: paw print small.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "158 × 162",
+    "type": "PNG"
+  },
+  {
+    "id": "ringed-planet",
+    "title": "Ringed Planet",
+    "file": "assets/icons/stickers/ringed-planet.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: ringed planet.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "188 × 144",
+    "type": "PNG"
+  },
+  {
+    "id": "sleepy-cat-face",
+    "title": "Sleepy Cat Face",
+    "file": "assets/icons/stickers/sleepy-cat-face.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: sleepy cat face.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "176 × 136",
+    "type": "PNG"
+  },
+  {
+    "id": "sparkle-cluster-left",
+    "title": "Sparkle Cluster Left",
+    "file": "assets/icons/stickers/sparkle-cluster-left.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: sparkle cluster left.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "144 × 131",
+    "type": "PNG"
+  },
+  {
+    "id": "star-solid",
+    "title": "Star Solid",
+    "file": "assets/icons/stickers/star-solid.png",
+    "category": "Icons",
+    "description": "Individual transparent icon sticker: star solid.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "icons",
+      "transparent"
+    ],
+    "size": "154 × 142",
+    "type": "PNG"
+  },
+  {
+    "id": "corner-left",
+    "title": "Corner Left",
+    "file": "assets/dividers/stickers/corner-left.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: corner left.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "141 × 150",
+    "type": "PNG"
+  },
+  {
+    "id": "corner-right",
+    "title": "Corner Right",
+    "file": "assets/dividers/stickers/corner-right.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: corner right.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "143 × 151",
+    "type": "PNG"
+  },
+  {
+    "id": "divider-cat-long",
+    "title": "Divider Cat Long",
+    "file": "assets/dividers/stickers/divider-cat-long.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: divider cat long.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "1134 × 102",
+    "type": "PNG"
+  },
+  {
+    "id": "divider-heart-moons",
+    "title": "Divider Heart Moons",
+    "file": "assets/dividers/stickers/divider-heart-moons.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: divider heart moons.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "141 × 62",
+    "type": "PNG"
+  },
+  {
+    "id": "divider-moon-heart",
+    "title": "Divider Moon Heart",
+    "file": "assets/dividers/stickers/divider-moon-heart.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: divider moon heart.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "94 × 54",
+    "type": "PNG"
+  },
+  {
+    "id": "divider-moon-phases",
+    "title": "Divider Moon Phases",
+    "file": "assets/dividers/stickers/divider-moon-phases.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: divider moon phases.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "236 × 65",
+    "type": "PNG"
+  },
+  {
+    "id": "divider-stars-left",
+    "title": "Divider Stars Left",
+    "file": "assets/dividers/stickers/divider-stars-left.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: divider stars left.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "313 × 74",
+    "type": "PNG"
+  },
+  {
+    "id": "divider-stars-right",
+    "title": "Divider Stars Right",
+    "file": "assets/dividers/stickers/divider-stars-right.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: divider stars right.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "305 × 69",
+    "type": "PNG"
+  },
+  {
+    "id": "divider-tiny-sparkle",
+    "title": "Divider Tiny Sparkle",
+    "file": "assets/dividers/stickers/divider-tiny-sparkle.png",
+    "category": "Dividers",
+    "description": "Individual transparent divider sticker: divider tiny sparkle.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "dividers",
+      "transparent"
+    ],
+    "size": "126 × 62",
+    "type": "PNG"
+  },
+  {
+    "id": "label-moon",
+    "title": "Label Moon",
+    "file": "assets/labels/stickers/label-moon.png",
+    "category": "Labels",
+    "description": "Individual transparent label sticker: label moon.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "labels",
+      "transparent"
+    ],
+    "size": "459 × 98",
+    "type": "PNG"
+  },
+  {
+    "id": "label-paw",
+    "title": "Label Paw",
+    "file": "assets/labels/stickers/label-paw.png",
+    "category": "Labels",
+    "description": "Individual transparent label sticker: label paw.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "labels",
+      "transparent"
+    ],
+    "size": "448 × 97",
+    "type": "PNG"
+  },
+  {
+    "id": "label-star",
+    "title": "Label Star",
+    "file": "assets/labels/stickers/label-star.png",
+    "category": "Labels",
+    "description": "Individual transparent label sticker: label star.",
+    "tags": [
+      "sticker",
+      "pink",
+      "neon",
+      "labels",
+      "transparent"
+    ],
+    "size": "454 × 107",
+    "type": "PNG"
+  }
+];
+const byId = (id) => document.getElementById(id);
+const grid = byId('grid');
+const categories = byId('categories');
+let selectedCategory = 'All assets';
+let selectedAsset = null;
+let toastTimeout;
+function notify(message) {
+  const toast = byId('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => toast.classList.remove('show'), 3100);
+}
+function publicAssetUrl(asset) { return new URL(asset.file, document.baseURI).href; }
+function published() { return location.hostname.endsWith('github.io') || (location.protocol === 'https:' && !['localhost','127.0.0.1'].includes(location.hostname)); }
+function catalogCategories() {
+  const names = ['All assets', 'Avatars', 'Banners', 'Backgrounds', 'Chibis', 'Icons', 'Dividers', 'Labels', 'Decorations'];
+  categories.replaceChildren();
+  names.forEach(name => {
+    const count = name === 'All assets' ? assets.length : assets.filter(a => a.category === name).length;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('aria-pressed', String(name === selectedCategory));
+    const label = document.createElement('span');
+    label.textContent = (name === 'All assets' ? '✦ ' : '◇ ') + name;
+    const num = document.createElement('span');
+    num.className = 'count-number';
+    num.textContent = String(count).padStart(2,'0');
+    button.append(label,num);
+    button.addEventListener('click', () => { selectedCategory = name; catalogCategories(); render(); });
+    categories.append(button);
+  });
+}
+function showAsset(asset) {
+  selectedAsset = asset;
+  byId('dialog-title').textContent = asset.title;
+  byId('dialog-img').src = asset.file;
+  byId('dialog-img').alt = asset.title;
+  byId('dialog-desc').textContent = asset.description;
+  byId('dialog-file').textContent = asset.file;
+  byId('dialog-size').textContent = asset.size;
+  byId('dialog-type').textContent = asset.type;
+  byId('dialog-url').value = published() ? publicAssetUrl(asset) : 'Publish on GitHub Pages to get a public URL';
+  byId('dialog-note').textContent = published() ? 'Public asset URL. Use this in JanitorAI CSS or HTML.' : 'Local preview: deploy first to make this a public URL.';
+  byId('asset-dialog').showModal();
+}
+function render() {
+  const q = byId('search').value.toLowerCase().trim();
+  const ext = byId('type-filter').value;
+  const filtered = assets.filter(asset =>
+    (selectedCategory === 'All assets' || asset.category === selectedCategory) &&
+    (ext === 'all' || asset.type.toLowerCase() === ext || (ext === 'jpg' && asset.type.toLowerCase() === 'jpeg')) &&
+    [asset.title, asset.description, asset.file, asset.category, ...asset.tags].join(' ').toLowerCase().includes(q)
+  );
+  byId('result-total').textContent = String(filtered.length).padStart(2,'0') + ' FILES CATALOGUED';
+  byId('empty').hidden = filtered.length !== 0;
+  grid.replaceChildren();
+  filtered.forEach(asset => {
+    const card = document.createElement('article'); card.className = 'asset-card';
+    const preview = document.createElement('div'); preview.className = 'asset-preview' + (asset.tags.includes('transparent') ? ' checker' : '');
+    const img = document.createElement('img'); img.src = asset.file; img.alt = asset.title; img.loading = 'lazy';
+    const badge = document.createElement('span'); badge.className = 'asset-badge'; badge.textContent = asset.type;
+    preview.append(img,badge);
+    const info = document.createElement('div'); info.className='asset-info';
+    const head = document.createElement('div'); head.className='asset-head';
+    const title=document.createElement('h3');title.textContent=asset.title;
+    const size=document.createElement('span');size.textContent=asset.size;
+    head.append(title,size);
+    const desc=document.createElement('p');desc.textContent=asset.description;
+    const actions=document.createElement('div');actions.className='asset-actions';
+    const copy=document.createElement('button');copy.textContent='COPY URL';copy.addEventListener('click', () => copyAsset(asset,'url'));
+    const inspect=document.createElement('button');inspect.textContent='INSPECT ↗';inspect.addEventListener('click', () => showAsset(asset));
+    actions.append(copy,inspect);info.append(head,desc,actions);card.append(preview,info);grid.append(card);
+  });
+}
+async function copyText(text) {
+  try {await navigator.clipboard.writeText(text);notify('Copied to clipboard. Meow! ♡');}
+  catch (err) { byId('dialog-url').value=text;byId('dialog-url').select();notify('Select and copy the URL manually.'); }
+}
+function copyAsset(asset, mode) {
+  if (!published()) { notify('Publish the site to get working public image links.');return; }
+  const url = publicAssetUrl(asset);
+  const snippets = {
+    url,
+    css: `background-image: url("${url}");\nbackground-size: cover;\nbackground-position: center;`,
+    html: `<img src="${url}" alt="${asset.title}">`
+  };
+  copyText(snippets[mode]);
+}
+byId('search').addEventListener('input', render);
+byId('type-filter').addEventListener('change', render);
+byId('dialog-close').addEventListener('click', () => byId('asset-dialog').close());
+byId('asset-dialog').addEventListener('click', e => {if (e.target===byId('asset-dialog')) byId('asset-dialog').close();});
+byId('copy-url').addEventListener('click', () => selectedAsset && copyAsset(selectedAsset,'url'));
+byId('copy-css').addEventListener('click', () => selectedAsset && copyAsset(selectedAsset,'css'));
+byId('copy-html').addEventListener('click', () => selectedAsset && copyAsset(selectedAsset,'html'));
+catalogCategories();render();
