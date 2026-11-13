@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#160c20" />
+  <meta name="description" content="Gremlin.OS — a personal asset library for JanitorAI profiles, character archives and creative projects." />
+  <title>Gremlin.OS — Asset Vault</title>
+  <link rel="icon" type="image/png" href="assets/avatars/gremlin-peek.png" />
+  <link rel="stylesheet" href="site.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="side" aria-label="Asset library navigation">
+      <a class="brand" href="./" aria-label="Gremlin.OS home"><span class="brand-icon">✦</span><span>GREMLIN<span class="brand-pink">.OS</span><small>THE ASSET VAULT</small></span></a>
+      <div class="sidebar-line"></div>
+      <div class="side-label">LIBRARY DIRECTORY</div>
+      <nav class="category-list" id="categories" aria-label="Asset filters"></nav>
+      <div class="sidebar-bottom"><div class="online-dot"></div><div><b>SYSTEM ONLINE</b><span>little menace detected</span></div></div>
+    </aside>
+    <main id="main">
+      <header class="toolbar">
+        <div class="breadcrumb">HOME <span>/</span> LIBRARY <span>/</span> <strong>ALL ASSETS</strong></div>
+        <div class="toolbar-right"><span class="version">RELEASE 01</span><span class="toolbar-star">✧</span></div>
+      </header>
+      <div class="content">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-ghost">GREMLIN</div>
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="pulse-dot"></span> ASSET REPOSITORY / ONLINE</p>
+            <h1 id="hero-title">THE <span>GREMLIN</span><br />ASSET VAULT<span class="cursor">_</span></h1>
+            <p class="hero-desc">All the little pieces of our universe, in one place. Pick an image, grab its public link, and summon it anywhere on JanitorAI.</p>
+            <div class="hero-pills"><span>✦ pink &amp; purple</span><span>♡ catcore</span><span>⌁ profile-ready</span></div>
+          </div>
+          <img class="hero-cat" src="assets/avatars/gremlin-cool.png" alt="Chibi gremlin with pink cat ears and sunglasses" />
+        </section>
+        <section class="collection" aria-labelledby="collection-title">
+          <div class="section-heading"><div><div class="tiny-kicker">✦ INDEX 001</div><h2 id="collection-title">Asset Library <span class="heading-sparkle">✧</span></h2><p>Organized, reusable, and ready to summon.</p></div><div id="result-total" class="count">03 FILES CATALOGUED</div></div>
+          <div class="filters"><label class="search-wrap"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search assets</span><input id="search" type="search" placeholder="Search assets, tags, files..." autocomplete="off" /></label><select id="type-filter" aria-label="Filter assets by type"><option value="all">All file types</option><option value="png">PNG</option><option value="jpg">JPG / JPEG</option><option value="webp">WebP</option><option value="svg">SVG</option></select></div>
+          <div id="grid" class="asset-grid" aria-live="polite"></div>
+          <div id="empty" class="empty" hidden>No matching little creatures found. Try another search. ♡</div>
+        </section>
+        <section class="help" aria-labelledby="help-title"><div class="help-icon">✧</div><div><h2 id="help-title">HOW TO SUMMON AN ASSET</h2><p>Publish this site on GitHub Pages first. Then use <strong>Copy image URL</strong> on any asset. Paste the link into JanitorAI's <code>&lt;img src="..."&gt;</code> or <code>background-image: url("...")</code>. Assets are public once published.</p></div></section>
+        <footer>GREMLIN.OS <span>✦</span> ALL CREATURES WELCOME <span class="right">MADE OF PIXELS &amp; QUESTIONABLE DECISIONS</span></footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="asset-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><div><p>ASSET FILE / INSPECTOR</p><h2 id="dialog-title">Asset name</h2></div><button type="button" id="dialog-close" aria-label="Close asset inspector">✕</button></div><div class="dialog-body"><div class="dialog-image-bg"><img id="dialog-img" src="" alt="" /></div><div class="dialog-details"><p id="dialog-desc"></p><dl><dt>FILENAME</dt><dd id="dialog-file"></dd><dt>DIMENSIONS</dt><dd id="dialog-size"></dd><dt>TYPE</dt><dd id="dialog-type"></dd></dl><p class="link-label">PUBLIC IMAGE URL</p><input id="dialog-url" aria-label="Public image URL" readonly /><div class="action-row"><button id="copy-url" class="primary" type="button">COPY IMAGE URL</button><button id="copy-css" type="button">COPY CSS</button><button id="copy-html" type="button">COPY HTML</button></div><small id="dialog-note">Deploy to GitHub Pages before copying public links.</small></div></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
